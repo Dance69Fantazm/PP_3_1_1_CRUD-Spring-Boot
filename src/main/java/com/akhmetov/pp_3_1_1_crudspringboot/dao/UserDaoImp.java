@@ -1,10 +1,9 @@
 package com.akhmetov.pp_3_1_1_crudspringboot.dao;
 
 import com.akhmetov.pp_3_1_1_crudspringboot.model.User;
-/*import jakarta.persistence.*;*/
+import jakarta.persistence.*;
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.*;
 import java.util.List;
 
 @Repository

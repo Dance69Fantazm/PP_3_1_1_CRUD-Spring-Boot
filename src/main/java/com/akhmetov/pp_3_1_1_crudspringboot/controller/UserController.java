@@ -2,18 +2,15 @@ package com.akhmetov.pp_3_1_1_crudspringboot.controller;
 
 import com.akhmetov.pp_3_1_1_crudspringboot.model.User;
 import com.akhmetov.pp_3_1_1_crudspringboot.service.UserService;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
-
-
 @Controller
 public class UserController {
-
 
     private final UserService userService;
 
@@ -33,7 +30,7 @@ public class UserController {
     }
 
     @PostMapping("/adduser")
-    public String addUser(@ModelAttribute("user") @Valid User user, BindingResult bindingResult) {
+    public String addUser(@ModelAttribute("user") @Validated User user, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return "adduser";
         }
@@ -48,7 +45,7 @@ public class UserController {
     }
 
     @PostMapping("/updateuser")
-    public String updateUser(@ModelAttribute("user") @Valid User user, BindingResult bindingResult) {
+    public String updateUser(@ModelAttribute("user") @Validated User user, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return "updateuser";
         }
@@ -57,7 +54,7 @@ public class UserController {
     }
 
     @GetMapping("/deleteUser")
-    public String deleteUser(@ModelAttribute("id") @Valid Long id, BindingResult bindingResult) {
+    public String deleteUser(@ModelAttribute("id") @Validated Long id, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return "deleteuser";
         }

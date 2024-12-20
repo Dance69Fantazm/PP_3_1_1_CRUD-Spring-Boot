@@ -2,58 +2,71 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Add New User</title>
+    <title>Update User</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 20px;
         }
+
         h2 {
             color: #333;
+            text-align: center;
         }
+
         form {
-            background-color: #fff;
+            max-width: 400px;
+            margin: 0 auto;
+            background: white;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            margin: auto;
         }
+
         label {
             display: block;
-            margin-bottom: 5px;
-            color: #555;
+            margin-bottom: 8px;
+            font-weight: bold;
         }
-        input[type="text"], input[type="number"] {
+
+        input[type="text"],
+        input[type="number"],
+        input[type="submit"] {
             width: 100%;
             padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
             border-radius: 4px;
+            box-sizing: border-box;
         }
+
         input[type="submit"] {
-            background-color: #7c0000;
+            background-color: #4CAF50;
             color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
             cursor: pointer;
-            font-size: 16px;
             transition: background-color 0.3s;
         }
+
         input[type="submit"]:hover {
-            background-color: #21239a;
+            background-color: #45a049;
         }
-        p.error {
-            color: red;
-            font-size: 14px;
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #4CAF50;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-<h2>Add New User</h2>
+<h2>Add User</h2>
 
 <form method="POST" action="/adduser">
 
@@ -75,5 +88,6 @@
 
     <input type="submit" value="Save"/>
 </form>
+
 </body>
 </html>

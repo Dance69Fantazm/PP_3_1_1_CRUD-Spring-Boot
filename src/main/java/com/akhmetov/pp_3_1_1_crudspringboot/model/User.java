@@ -1,6 +1,7 @@
 package com.akhmetov.pp_3_1_1_crudspringboot.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+
 import java.util.Objects;
 
 @Entity
