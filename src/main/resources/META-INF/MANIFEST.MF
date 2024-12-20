@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: com.akhmetov.pp_3_1_1_crudspringboot.Pp311CrudSpringBootAppl
+ ication
+
